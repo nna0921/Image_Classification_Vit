@@ -1,7 +1,7 @@
 # Image_Classification_ViT
 
 Project 03: Fine Tuning Using Different Architectures — Task 3 (ViT)
-Group assignment (max 2 persons) — Author: nna0921
+— Author: nna0921 | basim-12
 
 ---
 
@@ -15,36 +15,6 @@ Key goals:
 - Train / validate and save model checkpoints
 - Evaluate using accuracy, confusion matrix, and sample predictions
 - Deploy a demo (Streamlit or Gradio) for image upload and prediction
-
-Submission deliverables (what this repo should include):
-1. Full code and README instructions (this file)
-2. Deployed demo link (Streamlit or Gradio) — add your live URL to the Demo section
-3. Evaluation report with metrics and sample outputs (place in `reports/`)
-4. Medium blog post draft explaining dataset, model, and results (place in `blog/` or provide external link)
-
----
-
-## Repository structure (suggested)
-
-- data/                        # dataset downloads or symlinks (not committed)
-- src/
-  - data_prep.py               # data preprocessing & augmentation
-  - train_vit.py               # training / fine-tuning script for ViT
-  - evaluate.py                # evaluation scripts (accuracy, confusion matrix)
-  - infer.py                   # single image inference / demo backend
-  - utils.py                   # helpers (transforms, dataset loader)
-- demos/
-  - app_streamlit.py           # Streamlit demo (image upload + predict)
-  - app_gradio.py              # Gradio demo alternative
-- outputs/                     # training outputs, logs, checkpoints
-- reports/
-  - evaluation_report.pdf      # final evaluation report (add after experiments)
-- blog/
-  - draft_medium.md            # blog post draft
-- requirements.txt             # python dependencies
-- README.md                    # this file
-
-Adjust the structure if your code uses different filenames; the README commands below assume the listed filenames.
 
 ---
 
@@ -202,24 +172,6 @@ model = ViTForImageClassification.from_pretrained("google/vit-base-patch16-224",
 - 3-5 epochs generally work well for transfer learning here.
 - You may explore 4-bit quantization for inference (use bitsandbytes), but ensure correctness.
 - Keep checkpoints and a clear evaluation report with sample predictions.
-
----
-
-## Deliverables checklist
-
-- [ ] GitHub repo with code, README, and scripts (this repo)
-- [ ] Deployed demo (Streamlit or Gradio) — add final link above
-- [ ] Evaluation report in `reports/` including metrics, confusion matrix, and sample predictions
-- [ ] Blog post draft in `blog/draft_medium.md` describing dataset, model choices, training details, and results
-- [ ] Saved model checkpoints in `outputs/` (regularly during training)
-
----
-
-## Academic integrity / AI usage
-
-Per the assignment rules:
-- AI tools may be used for help (debugging, snippets, learning), but not for generating the full project code. Entirely AI-generated submissions will receive 0.
-- Record any AI assistance briefly in your report (e.g., "Used ChatGPT for debugging and small code snippets").
 
 ---
 
